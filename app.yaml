@@ -1,5 +1,6 @@
 application: blog-leylakapi
 version: 1
+service: php-fpm
 runtime: php
 api_version: 1
 threadsafe: true
