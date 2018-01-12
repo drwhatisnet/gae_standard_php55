@@ -3,6 +3,10 @@ FROM centos:latest
 MAINTAINER Cameron Waldron <cameron.waldron@gmail.com>
 
 COPY scripts/ /root/scripts/
+RUN chmod +x /root/scripts/initialize
+RUN chmod +x /root/scripts/get
+RUN chmod +x /root/scripts/update
+
 COPY conf/supervisord.conf /etc/supervisord.conf
 ENV PATH /root/scripts:$PATH
 EXPOSE 80 443
