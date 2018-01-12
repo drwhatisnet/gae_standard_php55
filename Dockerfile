@@ -21,6 +21,6 @@ RUN yum -y update && \
     sed -i '/user = apache/c\user = nginx' /etc/php-fpm.d/www.conf && \
     sed -i '/group = apache/c\group = nginx' /etc/php-fpm.d/www.conf && \
     yum -y install python-setuptools && \
-    easy_install supervisor && \
+    yum -y install supervisor && \
 	/root/scripts/initialize
 CMD ["supervisord"]
